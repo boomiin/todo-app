@@ -9,10 +9,15 @@ const todosData = [];
 
 function Main() {
   const [todos, setTodo] = useState(todosData);
+
   const addTodo = (obj) => {
     setTodo([...todos, obj]);
     console.log(todos);
   };
+
+  const deleteTodo = (id) =>
+    setTodo(todosData.filter((todo) => todo.id !== id));
+
   return (
     <div className="container">
       <div className="row mt-4">
@@ -27,7 +32,7 @@ function Main() {
       <div className="row">
         <div className="col-12 px-2 mt-5">
           <hr />
-          <TodoItem todo={todos} />
+          <TodoItem todo={todos} deleteTodo={deleteTodo} />
         </div>
       </div>
     </div>
