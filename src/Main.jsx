@@ -52,6 +52,17 @@ function Main() {
           </Switch>
         </div>
       </div>
+      <footer className="row" class="foot1">
+        <p className="footer text-center mx-auto" className="foot1">
+          Inspired by{" "}
+          <a
+            href="https://dribbble.com/shots/6570568-Todo-List-App"
+            className="dribbble"
+          >
+            @Ian Trent
+          </a>
+        </p>
+      </footer>
     </div>
   );
 }
