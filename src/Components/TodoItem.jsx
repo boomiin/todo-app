@@ -14,7 +14,7 @@ export default function TodoItem(props) {
                   <DoneSVG /> {todo.text}{" "}
                   <span
                     className="delete_opt mr-3"
-                    onClick={(todo) => props.deleteTodo(todo.id)}
+                    onClick={() => props.deleteTodo(todo.id)}
                   >
                     <TrashSVG />
                   </span>

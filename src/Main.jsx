@@ -5,18 +5,25 @@ import CompletedTasks from "./Components/CompletedTasks.jsx";
 import Input from "./Components/Input.jsx";
 import TodoItem from "./Components/TodoItem";
 
-const todosData = [];
+const initialTodo = [];
 
 function Main() {
-  const [todos, setTodo] = useState(todosData);
+  const [todos, setTodo] = useState(initialTodo);
 
   const addTodo = (obj) => {
+    obj.id = todos.length + 1;
     setTodo([...todos, obj]);
+    console.log(initialTodo);
     console.log(todos);
   };
 
-  const deleteTodo = (id) =>
-    setTodo(todosData.filter((todo) => todo.id !== id));
+  const deleteTodo = (id) => {
+    console.log(id);
+    let tab_tem = todos.filter((td) => td.id !== id);
+    console.log(todos);
+    console.log(tab_tem);
+    setTodo(tab_tem);
+  };
 
   return (
     <div className="container">

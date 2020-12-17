@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function Input({ addTodo }) {
+export default function Input(props) {
   const initElt = { done: false, text: "" };
 
   const [todoElt, setTodoElt] = useState(initElt);
@@ -10,14 +10,13 @@ export default function Input({ addTodo }) {
     setTodoElt({
       ...todoElt,
       [name]: value,
-      id: parseInt(Math.random() * (101 * 1) + 1),
     });
   };
 
   const submit = (e) => {
     e.preventDefault();
-    // if (!e.target.value) return;
-    addTodo(todoElt);
+    if (!todoElt.text) return;
+    props.addTodo(todoElt);
     setTodoElt(initElt);
   };
 
