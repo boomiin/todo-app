@@ -1,6 +1,6 @@
 import { React } from "react";
 import TrashSVG from "../SVGs/TrashSVG";
-import DoneSVG from "../SVGs/DoneSVG";
+import CurrentSVG from "../SVGs/CurrentSVG";
 
 export default function TodoItem(props) {
   return (
@@ -11,13 +11,13 @@ export default function TodoItem(props) {
             props.todo.map((todo) => (
               <span key={todo.text}>
                 <p>
-                  <DoneSVG /> {todo.text}{" "}
-                  <span
+                  <CurrentSVG /> {todo.text}{" "}
+                  <button
                     className="delete_opt mr-3"
-                    onClick={() => props.deleteTodo(todo.id)}
+                    onClick={() => props.deleteTodo(todo)}
                   >
                     <TrashSVG />
-                  </span>
+                  </button>
                 </p>
                 <hr />
               </span>

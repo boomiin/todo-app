@@ -7,7 +7,7 @@ export default function CurrentDate(props) {
         <p className="font-weight-bold m-0">
           {new Date().toLocaleDateString()}
         </p>
-        <p className="tasks-count">{props.todos.length} task(s)</p>
+        <p className="tasks-count">{props.todos.length} current task(s)</p>
       </div>
     </>
   );

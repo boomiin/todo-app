@@ -54,17 +54,29 @@ hr {
 }
 
 .delete_opt {
+  display: inline-block;
+  border: none;
+  text-decoration: none;
+  background-color: #464a52;
   position: absolute;
   right: 0;
 }
 
-.link {
-  font-weight: 100;
-  color: #fff;
+/* .activelink1 {
+  color: #fff !important;
+  text-decoration: none;
 }
 
+.activelink2 {
+  color: #fff !important;
+  text-decoration: none;
+} */
+
+.link {
+  color: #fff;
+  text-decoration: none;
+}
 .link:hover {
-  font-weight: 100;
   color: #fff;
   text-decoration: none;
 }

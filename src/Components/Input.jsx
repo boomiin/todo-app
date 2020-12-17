@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 export default function Input(props) {
-  const initElt = { done: false, text: "" };
+  const initElt = { text: "" };
 
   const [todoElt, setTodoElt] = useState(initElt);
 
